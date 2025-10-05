@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "teams-meeting-app-client-side-solution",
+    "id": "b3d7e1f0-8a2c-4d5e-9f6a-1b2c3d4e5f60",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "AI Meeting Assistant",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Teams AI Meeting App with transcription and summarization"
+      },
+      "longDescription": {
+        "default": "SharePoint Framework meeting app for Microsoft Teams that provides meeting information, transcription, and AI-powered summarization"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity"]
+    },
+    "features": [
+      {
+        "title": "teams-meeting-app Feature",
+        "description": "The feature that activates elements of the teams-meeting-app solution.",
+        "id": "c1d8e2f1-9b3a-4c5d-8e7f-0a1b2c3d4e5f",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "OnlineMeetings.Read"
+      },
+      {
+        "resource": "Microsoft Graph", 
+        "scope": "OnlineMeetingTranscript.Read.All"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/teams-meeting-app.sppkg"
+  }
+}

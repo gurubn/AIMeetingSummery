@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "a1b2c3d4-e5f6-789a-bcde-f0123456789a",
+  "alias": "TeamsAiMeetingAppWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsTab"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Advanced" },
+    "title": { "default": "Teams AI Meeting App" },
+    "description": { "default": "AI-powered Teams meeting app with transcription and summarization" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Teams AI Meeting App"
+    }
+  }]
+}

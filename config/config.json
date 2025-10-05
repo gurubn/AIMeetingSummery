@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "teams-ai-meeting-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/teamsAiMeetingApp/TeamsAiMeetingAppWebPart.js",
+          "manifest": "./src/webparts/teamsAiMeetingApp/TeamsAiMeetingAppWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TeamsAiMeetingAppWebPartStrings": "lib/webparts/teamsAiMeetingApp/loc/{locale}.js"
+  }
+}

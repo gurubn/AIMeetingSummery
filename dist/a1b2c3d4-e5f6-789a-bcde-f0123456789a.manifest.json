@@ -1,0 +1,62 @@
+{
+  "id": "a1b2c3d4-e5f6-789a-bcde-f0123456789a",
+  "alias": "TeamsAiMeetingAppWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart",
+    "TeamsTab"
+  ],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "Teams AI Meeting App"
+      },
+      "description": {
+        "default": "AI-powered Teams meeting app with transcription and summarization"
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "Teams AI Meeting App"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/dist/"
+    ],
+    "entryModuleId": "teams-ai-meeting-app-web-part",
+    "scriptResources": {
+      "teams-ai-meeting-app-web-part": {
+        "type": "path",
+        "path": "teams-ai-meeting-app-web-part_45735d2c954754df70c7.js"
+      },
+      "@microsoft/sp-property-pane": {
+        "type": "component",
+        "id": "f9e737b7-f0df-4597-ba8c-3060f82380db",
+        "version": "1.18.2"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.18.2"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
+        "version": "1.18.2"
+      },
+      "TeamsAiMeetingAppWebPartStrings": {
+        "type": "path",
+        "path": "TeamsAiMeetingAppWebPartStrings_en-us_0fd5628498019a53b4bbaef606c1238d.js"
+      }
+    }
+  }
+}

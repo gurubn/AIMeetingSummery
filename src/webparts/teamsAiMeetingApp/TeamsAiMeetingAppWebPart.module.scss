@@ -1,0 +1,292 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.teamsAiMeetingApp {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    background-color: $ms-color-white;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    margin: -24px -24px 24px -24px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .meetingInfo {
+    @include ms-font-m;
+    @include ms-fontColor-white;
+    margin: 8px 0 0 0;
+    opacity: 0.8;
+    font-family: 'Courier New', monospace;
+  }
+
+  .content {
+    background-color: $ms-color-white;
+    border-radius: 8px;
+    padding: 24px;
+    margin: -24px;
+  }
+
+  .section {
+    margin-bottom: 32px;
+    
+    h3 {
+      @include ms-font-l;
+      color: $ms-color-themeDark;
+      margin: 0 0 16px 0;
+      font-weight: 600;
+      border-bottom: 2px solid $ms-color-themeLight;
+      padding-bottom: 8px;
+    }
+
+    h4 {
+      @include ms-font-m;
+      color: $ms-color-themeDark;
+      margin: 0 0 12px 0;
+      font-weight: 600;
+    }
+  }
+
+  .statusIndicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: $ms-color-greenLight;
+    border-radius: 6px;
+    border-left: 4px solid $ms-color-green;
+  }
+
+  .statusDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    
+    &.active {
+      background-color: $ms-color-green;
+      animation: pulse 2s infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .transcriptionPanel {
+    border: 1px solid $ms-color-neutralLight;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: $ms-color-neutralLighter;
+  }
+
+  .status {
+    @include ms-font-m;
+    color: $ms-color-neutralDark;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: $ms-color-white;
+    border-radius: 4px;
+    border-left: 4px solid $ms-color-themePrimary;
+  }
+
+  .button {
+    @include ms-fontSize-m;
+    @include ms-fontWeight-semibold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    &.primary {
+      background-color: $ms-color-themePrimary;
+      color: $ms-color-white;
+      
+      &:hover {
+        background-color: $ms-color-themeDark;
+      }
+      
+      &:disabled {
+        background-color: $ms-color-neutralLight;
+        color: $ms-color-neutralDark;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .summaryPanel {
+    border: 1px solid $ms-color-neutralLight;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: $ms-color-neutralLighter;
+    min-height: 200px;
+  }
+
+  .summaryContent {
+    background-color: $ms-color-white;
+    padding: 16px;
+    border-radius: 4px;
+    min-height: 150px;
+    @include ms-font-s;
+    line-height: 1.5;
+  }
+
+  .loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    padding: 24px;
+    
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $ms-color-neutralLight;
+      border-top: 2px solid $ms-color-themePrimary;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .summaryFormatted {
+    .summarySection {
+      margin-bottom: 24px;
+      
+      h4 {
+        @include ms-font-m;
+        color: $ms-color-themeDark;
+        margin: 0 0 12px 0;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      p {
+        @include ms-font-s;
+        line-height: 1.6;
+        margin: 0 0 8px 0;
+      }
+      
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        
+        li {
+          @include ms-font-s;
+          line-height: 1.5;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+
+  .actionItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actionItem {
+    background-color: $ms-color-neutralLighter;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 4px solid $ms-color-orange;
+    
+    strong {
+      @include ms-font-s;
+      color: $ms-color-neutralDark;
+    }
+    
+    .assignee {
+      @include ms-font-xs;
+      color: $ms-color-themePrimary;
+      font-weight: 600;
+    }
+    
+    .dueDate {
+      @include ms-font-xs;
+      color: $ms-color-orange;
+      font-weight: 600;
+    }
+  }
+
+  .welcomePanel {
+    .featureList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        @include ms-font-m;
+        padding: 12px 0;
+        border-bottom: 1px solid $ms-color-neutralLight;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    
+    .stepsList {
+      @include ms-font-m;
+      line-height: 1.6;
+      
+      li {
+        margin-bottom: 8px;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .meetingPanel {
+    .section:first-child {
+      margin-top: 0;
+    }
+  }
+}

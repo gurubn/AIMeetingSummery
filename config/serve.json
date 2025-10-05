@@ -1,0 +1,12 @@
+{
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://localhost:5432/temp/workbench.html"
+    },
+    "teamsAiMeetingApp": {
+      "pageUrl": "https://localhost:5432/temp/workbench.html"
+    }
+  }
+}

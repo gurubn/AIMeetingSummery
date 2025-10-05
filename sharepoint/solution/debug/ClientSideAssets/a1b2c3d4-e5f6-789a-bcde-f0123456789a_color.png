@@ -1,0 +1,15 @@
+# Teams Icons Placeholder
+# 
+# For production deployment, replace these with actual PNG icon files:
+# 
+# Color Icon (96x96):
+# - File: a1b2c3d4-e5f6-789a-bcde-f0123456789a_color.png
+# - Size: 96x96 pixels
+# - Format: PNG with transparency
+# - Content: Full color app icon
+#
+# Outline Icon (32x32):  
+# - File: a1b2c3d4-e5f6-789a-bcde-f0123456789a_outline.png
+# - Size: 32x32 pixels
+# - Format: PNG with transparency
+# - Content: White outline version of the icon
